@@ -5,11 +5,15 @@ from django.contrib import admin
 from django.shortcuts import render_to_response
 from django.views.generic import TemplateView
 
+import app.views
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     url(r'^composer/', include('composer.urls')),
+    
+    url(r'^loader/', app.views.loader),
 
     url(r'', TemplateView.as_view(template_name="index.html")),
 ]
