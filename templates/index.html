@@ -1,10 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>zhebrak</title>
+    <title>Alexander Zhebrak</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <style>
+        .container {
+            margin: 0 auto;
+            max-width: 700px;
+            min-width: 300px;
+            font-size: 20px;
+        }
+
+        .about {
+            margin-top: 50px;
+            height: 280px;
+        }
+
+        .about .photo {
+            float: left;
+            width: 40%;
+        }
+
+        .about .photo img {
+            width: 100%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+        }
+
+        .about .info {
+            margin-left: 50%;
+        }
+
+        .about .info .name {
+            font-size: 38px;
+            margin-bottom: 30px;
+            line-height: normal;
+        }
+
+        .about .info .keywords ul {
+            list-style-type:none
+        }
+
+        .about .info .keywords i {
+            margin-right: 10px;
+            width: 20px;
+
+        }
+
+        .projects {
+            text-align: center;
+        }
+
+        .projects i {
+            margin-right: 10px;
+        }
+
+        .projects a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="about">
+            <div class="photo">
+                <img src="/static/img/avatar.png" />
+            </div>
+            <div class="info">
+                <div class="name">
+                    Alexander Zhebrak
+                </div>
+                <div class="keywords">
+                    <ul>
+                        <li>
+                            <i class="fa fa-wrench"></i>Software Developer
+                        </li>
+                        <li>
+                            <i class="fa fa-cog"></i>ML enthusiast
+                        </li>
+                        <li>
+                            <i class="fa fa-rocket"></i>Runner
+                        </li>
+                        <li>
+                            <i class="fa fa-music"></i>Musician
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr/>
 
-<div class="welcome" style="position: absolute; bottom: 10px; right: 10px;">hi</div>
+        <div class="projects row">
+            <div class="one-half column github">
+                <a target="_blank" href="https://github.com/zhebrak?tab=repositories"><i class="fa fa-github fa-lg"></i>github</a>
+            </div>
+            <div class="one-half column facebook">
+                <a target="_blank" href="https://www.facebook.com/alexander.zhebrak"><i class="fa fa-facebook fa-lg"></i>facebook</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
