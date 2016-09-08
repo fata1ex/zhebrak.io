@@ -12,10 +12,9 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     url(r'^composer/', include('composer.urls')),
-    
+
     url(r'^loader/', app.views.loader),
 
-    url(r'^loader/', apps.views.loader),
     url(r'', TemplateView.as_view(template_name="index.html")),
 ]
 
