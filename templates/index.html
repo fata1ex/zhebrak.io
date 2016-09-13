@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Alexander Zhebrak</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico"/>
+{% extends 'base.html' %}
+
+{% block head %}
     <style>
+
         .container {
             margin: 0 auto;
             max-width: 700px;
             min-width: 300px;
-            font-size: 20px;
+            font-size: 22px;
         }
 
         .about {
@@ -65,8 +62,8 @@
             text-decoration: none;
         }
     </style>
-</head>
-<body>
+{% endblock %}
+{% block body %}
     <div class="container">
         <div class="about">
             <div class="photo">
@@ -105,5 +102,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}

@@ -60,18 +60,6 @@ CELERY_APP = 'app.celery_app.app'
 BROKER_URL = 'redis://localhost:6379/0'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': config.get('database', 'NAME'),
-        'USER': config.get('database', 'USER'),
-        'PASSWORD': config.get('database', 'PASSWORD'),
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
-
-
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -101,3 +89,22 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "../static/")
 
 MEDIA_URL = '/media/'
+
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
+
+
+if not DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': config.get('database', 'NAME'),
+            'USER': config.get('database', 'USER'),
+            'PASSWORD': config.get('database', 'PASSWORD'),
+            'HOST': 'localhost',
+            'PORT': '3306',
+        }
+    }
