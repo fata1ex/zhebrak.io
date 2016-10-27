@@ -14,7 +14,7 @@ from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
-    url(r'^composer/', include('composer.urls')),
+    # url(r'^composer/', include('composer.urls')),
 
     url(r'^loader/', app.views.loader),
 
