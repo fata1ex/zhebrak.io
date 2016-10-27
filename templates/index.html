@@ -2,12 +2,20 @@
 
 {% block head %}
     <style>
+        body {
+            background-color: #fafafa;
+        }
+
+        hr {
+            margin-bottom: 1.5rem;
+        }
 
         .container {
             margin: 0 auto;
             max-width: 700px;
             min-width: 300px;
-            font-size: 22px;
+            font-size: 20px;
+            font-family: 'Inconsolata', monospace;
         }
 
         .about {
@@ -18,6 +26,7 @@
         .about .photo {
             float: left;
             width: 40%;
+            margin-top: -13px;
         }
 
         .about .photo img {
@@ -50,18 +59,44 @@
 
         }
 
-        .projects {
-            text-align: center;
+        .projects .title {
+            margin-bottom: 20px;
+            font-size: 38px;
         }
 
-        .projects i {
+        .projects .list li {
+            list-style-type:none;
+        }
+
+        .contacts {
+            margin-top: 30px;
+        }
+
+        .contacts i {
             margin-right: 10px;
         }
 
-        .projects a {
+        .contacts a {
             text-decoration: none;
         }
+
+        .fa-fw {
+            width: 100%;
+        }
     </style>
+
+    <script>
+        $(function() {
+            $('.fa-cog').hover(
+                function() {
+                    $(this).addClass('fa-spin');
+                },
+                function() {
+                    $(this).removeClass('fa-spin');
+                }
+            )
+        });
+   </script>
 {% endblock %}
 {% block body %}
     <div class="container">
@@ -76,24 +111,46 @@
                 <div class="keywords">
                     <ul>
                         <li>
-                            <i class="fa fa-wrench"></i>Software developer
+                            <i class="fa fa-fw fa-wrench"></i>Software engineer
                         </li>
                         <li>
-                            <i class="fa fa-cog"></i>ML enthusiast
+                            <i class="fa fa-fw fa-cog"></i>Machine learning enthusiast
                         </li>
                         <li>
-                            <i class="fa fa-rocket"></i>Runner
+                            <i class="fa fa-fw fa-rocket"></i>Runner
                         </li>
                         <li>
-                            <i class="fa fa-music"></i>Musician
+                            <i class="fa fa-fw fa-music"></i>Musician
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        <hr/>
 
-        <div class="projects row">
+
+        <hr/>
+        <div class="projects">
+            <div class="title">
+                Projects
+            </div>
+            <ul class="list">
+                <li class="project">
+                    <a target="_blank" href="https://github.com/park-python">python programming course</a> — at Bauman University
+                </li>
+                <li class="project">
+                    <a href="/composer/">neural composer</a> — composing music with neural network
+                </li>
+                <li class="project">
+                    <a target="_blank" href="https://github.com/zhebrak/raftos">raftos</a> — replication framework for distributed Python projects
+                </li>
+                <li class="project">
+                    <a target="_blank" href="https://github.com/zhebrak/django-statsy">django-statsy</a> — statistics framework for Django
+                </li>
+            </ul>
+        </div>
+
+        <hr/>
+        <div class="contacts row">
             <div class="one-half column github">
                 <a target="_blank" href="https://github.com/zhebrak?tab=repositories"><i class="fa fa-github fa-lg"></i>github</a>
             </div>
